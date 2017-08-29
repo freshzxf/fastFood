@@ -2,50 +2,62 @@
   {
 
     "img": "img/data2/xc1.jpg",
-    "title": "标题文字",
-    "marketprice": "134.45",
-    "productprice": "585.65"
+    "title": "香辣鸡翅",
+    "marketprice": "5.0",
+    "productprice": "8.0"
   },
   {
-    "img": "img/data2/xc1.jpg",
-    "title": "标题文字",
-    "marketprice": "334.45",
-    "productprice": "745.65"
+    "img": "img/data2/xc2.jpg",
+    "title": "原味鸡翅",
+    "marketprice": "4.0",
+    "productprice": "8.0"
   },
   {
-    "img": "img/data2/xc1.jpg",
-    "title": "标题文字",
-    "marketprice": "344.45",
-    "productprice": "545.65"
+    "img": "img/data2/xc3.jpg",
+    "title": "奥尔良鸡翅",
+    "marketprice": "5.0",
+    "productprice": "8.0"
   },
   {
-    "img": "img/data2/xc1.jpg",
-    "title": "标题文字",
-    "marketprice": "34.45",
-    "productprice": "145.6"
+    "img": "img/data2/xc4.jpg",
+    "title": "香辣鸡米花",
+    "marketprice": "5.0",
+    "productprice": "8.0"
   },
   {
-    "img": "img/data2/xc1.jpg",
-    "title": "标题文字",
-    "marketprice": "34.7",
-    "productprice": "45.65"
+    "img": "img/data2/xc5.jpg",
+    "title": "薯条",
+    "marketprice": "5.0",
+    "productprice": "8.0"
   },
   {
-    "img": "img/data2/xc1.jpg",
-    "title": "标题文字",
-    "marketprice": "34.7",
-    "productprice": "45.65"
+    "img": "img/data2/xc6.jpg",
+    "title": "原味鸡块",
+    "marketprice": "5.0",
+    "productprice": "8.0"
   },
   {
-    "img": "img/data2/xc1.jpg",
-    "title": "7",
-    "marketprice": "34.7",
-    "productprice": "45.65"
+    "img": "img/data2/xc7.jpg",
+    "title": "香芋甜心薯块",
+    "marketprice": "5.0",
+    "productprice": "8.0"
   },
   {
-    "img": "img/data2/xc1.jpg",
-    "title": "8",
-    "marketprice": "34.7",
-    "productprice": "45.65"
+    "img": "img/data2/xc8.jpg",
+    "title": "速派Q虾球",
+    "marketprice": "6.0",
+    "productprice": "10.0"
+  },
+  {
+    "img": "img/data2/xc9.jpg",
+    "title": "川香鸡柳",
+    "marketprice": "1.5",
+    "productprice": "3.0"
+  },
+  {
+    "img": "img/data2/xc10.jpg",
+    "title": "骨肉相连",
+    "marketprice": "2.0",
+    "productprice": "3.5"
   }
 ]

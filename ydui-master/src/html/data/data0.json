@@ -2,50 +2,50 @@
   {
 
     "img": "img/data0/hb1.jpg",
-    "title": "标题文字",
-    "marketprice": "134.45",
-    "productprice": "585.65"
+    "title": "超值套餐A",
+    "marketprice": "12.0",
+    "productprice": "18.8"
   },
   {
     "img": "img/data0/hb2.jpg",
-    "title": "标题文字",
-    "marketprice": "334.45",
-    "productprice": "745.65"
+    "title": "超值套餐B",
+    "marketprice": "11.0",
+    "productprice": "16.5"
   },
   {
     "img": "img/data0/hb3.jpg",
-    "title": "标题文字",
-    "marketprice": "344.45",
-    "productprice": "545.65"
+    "title": "超值套餐C",
+    "marketprice": "12.0",
+    "productprice": "18.8"
   },
   {
     "img": "img/data0/hb4.jpg",
-    "title": "标题文字",
-    "marketprice": "34.45",
-    "productprice": "145.6"
+    "title": "超值套餐D",
+    "marketprice": "13.0",
+    "productprice": "20.0"
   },
   {
     "img": "img/data0/hb5.jpg",
-    "title": "标题文字",
-    "marketprice": "34.7",
-    "productprice": "45.65"
+    "title": "超值套餐E",
+    "marketprice": "18.0",
+    "productprice": "28.0"
   },
   {
     "img": "img/data0/hb6.jpg",
-    "title": "标题文字",
-    "marketprice": "34.7",
-    "productprice": "45.65"
+    "title": "超值套餐F",
+    "marketprice": "11.0",
+    "productprice": "18.8"
   },
   {
     "img": "img/data0/hb7.jpg",
-    "title": "7",
-    "marketprice": "34.7",
-    "productprice": "45.65"
+    "title": "超值套餐G",
+    "marketprice": "23.0",
+    "productprice": "38.0"
   },
   {
     "img": "img/data0/hb8.jpg",
-    "title": "8",
-    "marketprice": "34.7",
-    "productprice": "45.65"
+    "title": "超值套餐H",
+    "marketprice": "14.0",
+    "productprice": "28.0"
   }
 ]
