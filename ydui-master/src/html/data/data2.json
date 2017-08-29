@@ -1,0 +1,51 @@
+[
+  {
+
+    "img": "img/data2/xc1.jpg",
+    "title": "标题文字",
+    "marketprice": "134.45",
+    "productprice": "585.65"
+  },
+  {
+    "img": "img/data2/xc1.jpg",
+    "title": "标题文字",
+    "marketprice": "334.45",
+    "productprice": "745.65"
+  },
+  {
+    "img": "img/data2/xc1.jpg",
+    "title": "标题文字",
+    "marketprice": "344.45",
+    "productprice": "545.65"
+  },
+  {
+    "img": "img/data2/xc1.jpg",
+    "title": "标题文字",
+    "marketprice": "34.45",
+    "productprice": "145.6"
+  },
+  {
+    "img": "img/data2/xc1.jpg",
+    "title": "标题文字",
+    "marketprice": "34.7",
+    "productprice": "45.65"
+  },
+  {
+    "img": "img/data2/xc1.jpg",
+    "title": "标题文字",
+    "marketprice": "34.7",
+    "productprice": "45.65"
+  },
+  {
+    "img": "img/data2/xc1.jpg",
+    "title": "7",
+    "marketprice": "34.7",
+    "productprice": "45.65"
+  },
+  {
+    "img": "img/data2/xc1.jpg",
+    "title": "8",
+    "marketprice": "34.7",
+    "productprice": "45.65"
+  }
+]

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html class="full">
+<head>
+    <meta charset="UTF-8">
+    <title>山德士汉堡--健康美味首选</title>
+    <meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0" name="viewport"/>
+    <meta content="yes" name="apple-mobile-web-app-capable"/>
+    <meta content="black" name="apple-mobile-web-app-status-bar-style"/>
+    <meta content="telephone=no" name="format-detection"/>
+    <link rel="stylesheet" href="../css/ydui.css?rev=@@hash"/>
+    <script src="../js/ydui.flexible.js"></script>
+    <style>
+        .full{
+            width: 100%!important;
+            height: 100%!important;
+        }
+        .g-scrollview:after{
+            height: 0;
+        }
+    </style>
+</head>
+<body class="full">
+<section class="g-flexview">
+    <div id="J_Tab" class="m-tab demo-pitch full">
+        <ul class="tab-nav">
+            <li class="tab-nav-item tab-active"><a href="javascript:;">精选套餐</a></li>
+            <li class="tab-nav-item"><a href="javascript:;">美味主食</a></li>
+            <li class="tab-nav-item"><a href="javascript:;">优选小吃</a></li>
+        </ul>
+        <div class="tab-panel">
+            <div class="tab-panel-item tab-active">
+                <!--套餐-->
+                <section class="g-scrollview" id="J_List0">
+                    <div id="J_ListContent0" class="m-list list-theme2"></div>
+                </section>
+            </div>
+            <div class="tab-panel-item">
+                <!--套餐-->
+                <section class="g-scrollview" id="J_List1">
+                    <div id="J_ListContent1" class="m-list list-theme2"></div>
+                </section>
+            </div>
+            <div class="tab-panel-item">
+                <!--套餐-->
+                <section class="g-scrollview" id="J_List2">
+                    <div id="J_ListContent2" class="m-list list-theme2"></div>
+                </section>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script id="J_ListHtml" type="text/html">
+    <article class="m-list list-theme2">
+    {{each list as data}}
+    <a href="javascript:;" class="list-item">
+        <div class="list-img">
+            <img src="http://static.ydcss.com/uploads/ydui/goods_default.jpg" data-url="{{data.img}}">
+        </div>
+        <div class="list-mes">
+            <h3 class="list-title">{{data.title}}</h3>
+            <div class="list-mes-item">
+                <div>
+                    <span class="list-price"><em>¥</em>{{data.marketprice}}</span>
+                    <span class="list-del-price">¥{{data.productprice}}</span>
+                </div>
+            </div>
+        </div>
+    </a>
+    {{/each}}
+    </article>
+</script>
+
+<script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="http://static.ydcss.com/libs/arttemplate/template.js"></script>
+<script src="../js/ydui.js"></script>
+<script>
+    !function () {
+        /*tab切换*/
+        var $tab = $('#J_Tab');
+        $tab.tab({
+            nav: '.tab-nav-item',
+            panel: '.tab-panel-item',
+            activeClass: 'tab-active'
+        });
+        $tab.find('.tab-nav-item').on('opened.ydui.tab', function (e) {
+            console.log('索引：%s - [%s]已经打开了', e.index, $(this).text());
+        });
+
+        /**/
+        var resize = (function () {
+            $('.tab-panel').height(window.innerHeight - 42);
+            $('.tab-panel-item').height(window.innerHeight - 66);
+        })();
+
+        // 根据实际情况自定义获取数据方法
+        function loadData(idCon,idInner,url) {
+            var page = 1, pageSize = 10;
+            var loadMore = function (callback) {
+                $.ajax({
+                    url: url,
+                    dataType: 'json',
+                    data: {
+                        page: page,
+                        pagesize: pageSize
+                    },
+                    success: function (ret) {
+                        typeof callback == 'function' && callback(ret);
+                    }
+                });
+            };
+            $('#'+idCon).infiniteScroll({
+                binder: '#' + idCon,  //绑定浏览器滚动事件DOM，默认是window
+                pageSize: pageSize,  //每页请求的数据量
+                initLoad: true,  //是否加载第一屏数据
+                loadingHtml: '<img src="http://static.ydcss.com/uploads/ydui/loading/loading10.svg"/>',  //loading图标
+                loadListFn: function () {
+                    var def = $.Deferred();
+                    loadMore(function (listArr) {
+                        /*console.log(listArr)*/
+                        var html = template('J_ListHtml', {list: listArr});  //用数据渲染指定id的模板
+                        $('#'+idInner).append(html).find('img').lazyLoad({binder: '#'+idCon});
+                        def.resolve(listArr);
+                        ++page;
+                    });
+
+                    return def.promise();
+                }
+            });
+        };
+        loadData('J_List0','J_ListContent0','data/data0.json');
+        loadData('J_List1','J_ListContent1','data/data1.json');
+        loadData('J_List2','J_ListContent2','data/data2.json');
+
+    }();
+</script>
+</body>
+</html>
